@@ -70,14 +70,14 @@ const handleSubmit = async (e) => {
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
+            <label htmlFor="email-address" className="block text-sm font-medium text-gray-700">
+        Email address
+      </label>
               <input
                 id="email-address"
                 name="email"
                 type="email"
-                autoComplete="email"
+                autoComplete="new-email" 
                 required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Email address"
@@ -86,14 +86,14 @@ const handleSubmit = async (e) => {
               />
             </div>
             <div>
-              <label htmlFor="password" className="sr-only">
-                Password
-              </label>
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+        Password
+      </label>
               <input
                 id="password"
                 name="password"
                 type="password"
-                autoComplete="current-password"
+                autoComplete="new-password"  
                 required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
@@ -131,3 +131,7 @@ const handleSubmit = async (e) => {
 };
 
 export default Login;
+
+
+
+
