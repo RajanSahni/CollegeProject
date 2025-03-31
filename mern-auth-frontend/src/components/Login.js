@@ -27,7 +27,7 @@ const handleSubmit = async (e) => {
     setError('');
   
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', formData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, formData);
       localStorage.setItem('token', response.data.token);
       setIsLoading(false);
       if (response.data.user.role === 'Admin') {
@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
       <div className="w-full max-w-md space-y-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Sign in to your account
+            Login in to your account
           </h2>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
@@ -115,7 +115,7 @@ const handleSubmit = async (e) => {
               disabled={isLoading}
               className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
-              {isLoading ? 'Signing in...' : 'Sign in'}
+              {isLoading ? 'Signing in...' : 'Login in'}
             </button>
           </div>
           
