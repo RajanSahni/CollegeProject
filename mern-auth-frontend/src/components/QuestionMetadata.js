@@ -79,7 +79,7 @@ const QuestionMetadata=()=>{
         </Form.Item> 
 
         <Form.Item
-          name="expalanation"
+          name="explanation"
           label="Enter Your answer explaination "
           rules={[{ required: true, message: "Please provide correct explaination" }]}
         >
