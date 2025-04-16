@@ -148,11 +148,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const AdminDashboard = () => {
   const navigate = useNavigate();
 
   const handleAddQuestionClick = () => {
     navigate('/add-question');
+  };
+
+  const getqquestionClick = () => {
+    navigate('/get-question');
+  };
+
+  const viewDeployedQuestionsClick = () => {
+    navigate('/view-deployed');
   };
 
   return (
@@ -165,6 +174,24 @@ const AdminDashboard = () => {
         >
           Add New Question
         </button>
+
+        <button
+          onClick={getqquestionClick}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Get All Question
+        </button>
+
+        <button
+          onClick={viewDeployedQuestionsClick}
+          className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        >
+          View Deployed Questions
+        </button>
+
+
+      
+
       </div>
     </div>
   );

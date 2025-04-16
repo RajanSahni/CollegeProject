@@ -208,6 +208,7 @@ const Questiontitle = () => {
       uploader: {
         insertImageAsBase64URI: true,
       },
+      pastePlainText: true,
       events: {
         afterInit: (editor) => {
           console.log("Editor initialized");

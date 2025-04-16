@@ -404,6 +404,7 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/auth-app', 
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/questions', require('./routes/questionRoutes'));
 app.use('/api/upload', require('./routes/uploadRoutes'));
+app.use('/api/deploy', require('./routes/deployRoutes'));
 
 // Error handling middleware
 app.use((err, req, res, next) => {

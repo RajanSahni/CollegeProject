@@ -19,7 +19,8 @@ const questionSchema = new mongoose.Schema({
     explanation: { type: String, required: true },
     createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now }
+    updatedAt: { type: Date, default: Date.now },
+    deployedTo: { type: String, enum: ['Hindi', 'Math', 'Science', 'English'], default: null }
 });
 
 questionSchema.pre('save', function(next) {
