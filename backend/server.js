@@ -405,6 +405,7 @@ app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/questions', require('./routes/questionRoutes'));
 app.use('/api/upload', require('./routes/uploadRoutes'));
 app.use('/api/deploy', require('./routes/deployRoutes'));
+app.use('/api/quiz', require('./routes/quizRoutes'));
 
 // Error handling middleware
 app.use((err, req, res, next) => {
