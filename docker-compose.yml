@@ -14,7 +14,7 @@ services:
       context: ./backend
     container_name: backend
     ports:
-      - "5000:5000"
+      - "5002:5002"
     environment:
       - NODE_ENV=production
       - MONGO_URI=mongodb://mongo:27017/auth-app
@@ -27,7 +27,7 @@ services:
       context: ./mern-auth-frontend
     container_name: frontend
     ports:
-      - "3000:80"
+      - "3002:80"
     environment:
       - REACT_APP_API_URL=http://backend:5000/api
     depends_on:
